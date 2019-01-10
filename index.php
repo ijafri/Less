@@ -49,7 +49,21 @@
 
 	<div id="primary">
 		<div id="content" role="main">
+			
+/*-----------------------------------------------------------------------------------*/
+/* Category - Tags titles on Archive page.
+/*-----------------------------------------------------------------------------------*/			
 
+<?php /* If this is a category archive */ if (is_category()) { ?>
+<h2 class="archiveTitle">Category: <strong><?php single_cat_title(); ?></strong></h2>
+			
+<?php /* If this is a category archive */ } elseif (is_tag()) { ?>
+<h2 class="archiveTitle">Tag: <strong><?php single_tag_title(); ?></strong></h2>
+		
+<?php /* If this is a monthly archive */ } elseif (is_month()) { ?>
+<h2 class="archiveTitle">Month: <strong><?php the_time('F, Y'); ?></strong></h2> <?php } ?>			
+			
+			
 
 <?php
 	/*-----------------------------------------------------------------------------------*/
