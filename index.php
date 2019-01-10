@@ -50,11 +50,15 @@
 	<div id="primary">
 		<div id="content" role="main">
 			
+		
+
+<?php 
+			
 /*-----------------------------------------------------------------------------------*/
 /* Category - Tags titles on Archive page.
-/*-----------------------------------------------------------------------------------*/			
-
-<?php /* If this is a category archive */ if (is_category()) { ?>
+/*-----------------------------------------------------------------------------------*/	
+			
+/* If this is a category archive */ if (is_category()) { ?>
 <h2 class="archiveTitle">Category: <strong><?php single_cat_title(); ?></strong></h2>
 			
 <?php /* If this is a category archive */ } elseif (is_tag()) { ?>
